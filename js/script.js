@@ -88,6 +88,7 @@ window.addEventListener('scroll', function() {
 });
 
 // Блокировка скролла
+
 const scrollController = {
   scrollPosition: 0,
   disabledScroll() {
