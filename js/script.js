@@ -11,6 +11,7 @@ burgerBtn.addEventListener('click', function (e) {
       burgerMenu.classList.add('active_menu');
       scrollController.disabledScroll();
       headerDescription.style.position = 'static';
+      burgerBtn.style.opacity = '0';
 });
 
 burgerMenuBtnClose.addEventListener('click', function (e) { 
@@ -19,6 +20,7 @@ burgerMenuBtnClose.addEventListener('click', function (e) {
     burgerMenu.classList.remove('active_menu');
     headerDescription.style.position = 'relative';
     scrollController.enabledScroll();
+    burgerBtn.style.opacity = '1';
 });
 
 const swiper = new Swiper(".reviews__swipper", {
@@ -44,8 +46,6 @@ for(let link of linksSectionDesktop) {
 
       const blockID = link.getAttribute('href');
 
-      console.log(blockID);
-
       document.querySelector('' + blockID).scrollIntoView({
           behavior: "smooth",
           block: "start"
@@ -63,6 +63,8 @@ for(let link of linksSectionMobile) {
       burgerMenu.classList.remove('active_menu');
       scrollController.enabledScroll();
       headerDescription.style.position = 'relative';
+      burgerBtn.style.opacity = '1';
+      
 
       document.querySelector('' + blockID).scrollIntoView({
           behavior: "smooth",
@@ -72,7 +74,7 @@ for(let link of linksSectionMobile) {
 }
 
 const cap = document.querySelector('.header__cap');
-const capHeight = 50;
+const capHeight = 0;
 const headerContainer = document.querySelector('.header__container');
 
 window.addEventListener('scroll', function() {
@@ -88,7 +90,6 @@ window.addEventListener('scroll', function() {
 });
 
 // Блокировка скролла
-
 const scrollController = {
   scrollPosition: 0,
   disabledScroll() {
