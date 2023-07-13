@@ -5,5 +5,3 @@
 - CSS
 - JavaScript
 - Swiper Slider
-- Animate.css
-- Wow.js
