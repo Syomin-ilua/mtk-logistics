@@ -1,3 +1,26 @@
+const cap = document.querySelector('.header__cap');
+const headerContainer = document.querySelector('.header__container');
+
+window.addEventListener('DOMContentLoaded', function() {
+  scrollPageController();
+});
+
+window.addEventListener('scroll', function() {
+  scrollPageController();
+});
+
+function scrollPageController() {
+  let scrollPage = Math.floor(this.scrollY);
+    
+  if(scrollPage >= 0) {
+    cap.classList.add('header__fixed_cap');
+    headerContainer.style.paddingTop = '207px';
+  } else {
+    cap.classList.remove('header__fixed_cap');
+    headerContainer.style.paddingTop = '';
+  }
+}
+
 // Бургер меню
 const burgerBtn = document.querySelector('.burger__btn');
 const burgerMenu = document.querySelector('.burger__menu');
@@ -73,21 +96,6 @@ for(let link of linksSectionMobile) {
   });
 }
 
-const cap = document.querySelector('.header__cap');
-const capHeight = 0;
-const headerContainer = document.querySelector('.header__container');
-
-window.addEventListener('scroll', function() {
-    let scrollPage = Math.floor(this.scrollY);
-    
-    if(scrollPage >= capHeight) {
-      cap.classList.add('header__fixed_cap');
-      headerContainer.style.paddingTop = '207px';
-    } else {
-      cap.classList.remove('header__fixed_cap');
-      headerContainer.style.paddingTop = '';
-    }
-});
 
 // Блокировка скролла
 const scrollController = {

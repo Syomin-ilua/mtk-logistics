@@ -1277,6 +1277,13 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     text-align: center;
     color: #000;
 }
+.dontKnowSection__form_services_title {
+    font-family: 'Montserrat SemiBold';
+    font-size: 19px;
+    line-height: 23px;
+    color: #353535;
+    margin-bottom: 6px;
+}
 .dontKnowSection__text {
     font-family: 'Montserrat Regular';
     font-size: 17px;
@@ -1569,7 +1576,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;}
     }
 }
 @media(max-width: 1260px) {
-    .form__services_title {
+    .dontKnowSection__form_services_title {
         text-align: center;
     }
     .form__services_text {
